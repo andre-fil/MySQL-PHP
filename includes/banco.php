@@ -7,7 +7,7 @@
     <title>Banco de dados</title>
 </head>
 <body>
-    <pre>
+
         <?php
 
         #criar a conexão com o BD. Passar os parametros 'servidor', 'usuario','senha','nome do banco'
@@ -20,26 +20,9 @@
             die();
         }
 
-        #Realizar uma query e guardar numa var
-
-        $busca = $banco->query('select nome, nota from livros');
-
-        #Verificar se a busaca deu certo
-        if(!$busca){
-            echo "<p>falha na busca! $banco->error</p>";
-        }
-
-        #guardar a busca na var e imprimir
-
-        while($res = $busca->fetch_object()){
-            print_r($res);
-        }
 
         ?>
 
-
-
-    </pre>
     
 </body>
 </html>
